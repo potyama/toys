@@ -7,9 +7,9 @@ students = list(range(1, N+1))
 
 random.shuffle(students)
 
-for i in range(len(students)):
-    if i % 7 == 1 and i != 1:
-        print("")
-    print("  " + str(students[i]) + " |", end='', flush = True)
-    time.sleep(1)
+for i, student in enumerate(students):
+    if i % 7 == 0 and i != 0:
+        print()
+    print(" {} |".format(student), end='', flush = True)
+    time.sleep(0.1)
 
